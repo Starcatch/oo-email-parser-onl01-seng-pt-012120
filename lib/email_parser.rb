@@ -2,19 +2,16 @@
 class EmailParser
   attr_accessor :name, : cvs_emails
   
-  def initialize(emails)
+  def initialize(cvs_emails)
     @cvs_emails = cvs_emailsemails
   end 
   
   def parse
     cvs_emails.split.collect do |address|
-      address.split(' ')
+      address.split(' , ')
  end 
  .flatten.uniq
-end 
+ end 
 end 
 
 
-# emails. The parse method on the class should separate them into
-# unique email addresses. The delimiters to support are commas (',')
-# or whitespace (' ').
