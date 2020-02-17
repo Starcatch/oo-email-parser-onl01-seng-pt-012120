@@ -1,6 +1,12 @@
-
+class EmailParser
+	attr_accessor :emails
+	
+	def initialize(emails)
+		@emails = emails
+	end
+	
   def parse
-    cvs_emails.split.collect do |address|
+    emails.split.collect do |address|
       address.split(' , ')
  end 
  .flatten.uniq
