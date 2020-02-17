@@ -12,3 +12,8 @@ def parse
     .flatten.uniq 
   end 
 end 
+
+#def parse
+  #emails.split.delete(',').split.uniq
+#end
+#end 
