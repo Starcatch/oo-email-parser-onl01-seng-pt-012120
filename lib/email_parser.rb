@@ -1,13 +1,13 @@
 # Build a class EmailParser that accepts a string of unformatted 
 class EmailParser
-  attr_accessor :name, :emails
+  attr_accessor :name, : cvs_emails
   
   def initialize(emails)
-    @emails = emails
+    @cvs_emails = cvs_emailsemails
   end 
   
   def parse
-    emails.split.collect do |address|
+    cvs_emails.split.collect do |address|
       address.split(' ')
  end 
  .flatten.uniq
